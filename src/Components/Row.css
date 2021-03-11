@@ -1,0 +1,27 @@
+.row > h2 {
+  margin-top: 20px;
+}
+
+.row__paper {
+  border-radius: 2%;
+  transition: all 400ms;
+}
+.row__paper:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+.row__posterLarge:hover {
+  transform: scale(1.09);
+  transform: translateY(-15%);
+}
+.n > h3 {
+  text-align: center;
+  margin: 0;
+  transform: translate(-5%, -130%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
