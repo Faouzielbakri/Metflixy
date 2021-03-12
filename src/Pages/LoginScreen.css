@@ -1,5 +1,5 @@
 * {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .loginScreen {
   position: relative;
@@ -14,32 +14,17 @@
   background-size: cover;
 }
 
-.loginScreen__nav {
-  justify-content: space-between;
-  align-items: baseline;
-  justify-items: baseline;
-}
 .loginScreen__logo {
   width: 8rem;
   object-fit: contain;
   cursor: pointer;
 }
 
-.loginScreen__button {
-  font-size: 1rem;
-  color: aliceblue;
-  margin-right: 20px;
-  background-color: #e50914;
-  border: none;
-  cursor: pointer;
-}
 .loginScreen__gradient {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  transform: translateX(0%);
   background: rgba(0, 0, 0, 0.4);
-  z-index: 2;
   background-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.8) 0,
