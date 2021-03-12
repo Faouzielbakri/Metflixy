@@ -2,13 +2,7 @@ import axios from "../axios";
 import React, { useEffect, useState } from "react";
 import "./Row.css";
 import requets from "./../Request";
-import {
-  Grid,
-  Typography,
-  Paper,
-  Container,
-  IconButton,
-} from "@material-ui/core";
+import { Grid, Typography, Container } from "@material-ui/core";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
@@ -31,16 +25,22 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
       </Typography>
       <Grid container spacing={2} justify="space-between">
         {movies.map((movie) => (
-          <Grid item xs={6} sm={2} md={1}>
-            <Paper
+          <Grid item xs={6} sm={3} md={1} style={{ overflow: "hidden" }}>
+            <img
+              key={movie.id}
+              src={`${base_url}${
+                isLargeRow ? movie.poster_path : movie.backdrop_path
+              }`}
+              alt={movie.name}
+              className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+            />
+            {/* <Paper
               key={movie.id}
               elevation={3}
               style={{
                 objectFit: "cover",
-                backgroundImage: `url(${base_url}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
-                })`,
-                backgroundSize: "cover ",
+                backgroundImage: ,
+                backgroundSize: "contained",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",
                 minHeight: `${isLargeRow ? 250 : 125}px`,
@@ -49,7 +49,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
               onClick={() => {
                 console.log(`click on ${movie.name}`);
               }}
-            />
+            /> */}
           </Grid>
         ))}
       </Grid>

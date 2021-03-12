@@ -17,13 +17,37 @@ function HomeScreen() {
         fetchUrl={requets.fetchNetflixOriginals}
         isLargeRow
       />
-      <Row title={`Trending`} fetchUrl={requets.fetchTrending} />
-      <Row title={`Top Rated`} fetchUrl={requets.fetchTopRated} />
-      <Row title={`Action Movies`} fetchUrl={requets.fetchActionMovies} />
-      <Row title={`Comedy Movies`} fetchUrl={requets.fetchComedyMovies} />
-      <Row title={`Horror Movies`} fetchUrl={requets.fetchHorrorMovies} />
-      <Row title={`Romance Movies`} fetchUrl={requets.fetchRomanceMovies} />
-      <Row title={`Documentaries`} fetchUrl={requets.fetchDocumentaries} />
+      <Row
+        key={"Trending"}
+        title={`Trending`}
+        fetchUrl={requets.fetchTrending}
+      />
+      <Row key={"Top"} title={`Top Rated`} fetchUrl={requets.fetchTopRated} />
+      <Row
+        key={"Action"}
+        title={`Action Movies`}
+        fetchUrl={requets.fetchActionMovies}
+      />
+      <Row
+        key={"Comedy"}
+        title={`Comedy Movies`}
+        fetchUrl={requets.fetchComedyMovies}
+      />
+      <Row
+        key={"Horror"}
+        title={`Horror Movies`}
+        fetchUrl={requets.fetchHorrorMovies}
+      />
+      <Row
+        key={"Romance"}
+        title={`Romance Movies`}
+        fetchUrl={requets.fetchRomanceMovies}
+      />
+      <Row
+        key={"Documentaries"}
+        title={`Documentaries`}
+        fetchUrl={requets.fetchDocumentaries}
+      />
     </div>
   );
 }

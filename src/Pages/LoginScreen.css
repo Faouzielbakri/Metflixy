@@ -1,29 +1,43 @@
 * {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .loginScreen {
   position: relative;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  min-width: 100vw;
-}
-.loginScreen__wrapper {
   background: url("https://assets.nflxext.com/ffe/siteui/vlv3/70deccb9-9b6c-4be1-b781-18dd1bcd9264/6f1c851d-d736-4184-b8cd-4fab286d3dda/MA-en-20210301-popsignuptwoweeks-perspective_alpha_website_medium.jpg")
     center no-repeat;
   background-size: cover;
 }
-
-.loginScreen__logo {
-  width: 8rem;
-  object-fit: contain;
+.loginScreen__button {
+  background-color: #e50914;
+  position: fixed;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  right: 30px;
+  top: 20px;
+  z-index: 2;
   cursor: pointer;
 }
-
+.loginScreen__button:hover {
+  background-color: #fc0e1a;
+}
+.loginScreen__logo {
+  position: fixed;
+  left: 0;
+  width: 175px;
+  object-fit: contain;
+  padding-top: 20px;
+  padding-left: 45px;
+  cursor: pointer;
+  z-index: 2;
+}
 .loginScreen__gradient {
-  position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  z-index: 1;
   background: rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(
     to top,
@@ -31,4 +45,60 @@
     rgba(0, 0, 0, 0) 60%,
     rgba(0, 0, 0, 0.8) 100%
   );
+}
+.loginScreen__body {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  margin: auto auto;
+
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  padding-top: 20px;
+  color: #fff;
+}
+.loginScreen__body > h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  max-width: 35%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.loginScreen__body > h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.loginScreen__body > h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.loginScreen__input {
+  margin: 20px;
+}
+.loginScreen__input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+}
+.loginScreen__getStarted {
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  font-weight: 600;
+  transform: translateY(1px);
+}
+
+@media only screen and (max-width: 1000px) {
+  .loginScreen__body > h1 {
+    max-width: none;
+  }
 }

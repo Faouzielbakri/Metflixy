@@ -1,18 +1,22 @@
+* {
+  /* overflow: hidden; */
+}
+.row {
+  overflow-y: hidden;
+}
 .row > h2 {
   margin-top: 20px;
 }
+.row__poster {
+  max-height: 100px;
+  object-fit: cover;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
 
-.row__paper {
-  border-radius: 2%;
-  transition: all 400ms;
-}
-.row__paper:hover {
-  transform: scale(1.08);
-  cursor: pointer;
-}
 .row__posterLarge:hover {
   transform: scale(1.09);
-  transform: translateY(-15%);
+  border-radius: 3%;
 }
 .n > h3 {
   text-align: center;
