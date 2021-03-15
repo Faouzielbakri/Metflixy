@@ -6,6 +6,7 @@ import { Button } from "@material-ui/core";
 
 function LoginScreen() {
   const [signin, setSignin] = useState(false);
+  const [email, setemail] = useState("");
   return (
     <div className="loginScreen">
       <div className="loginScreen__background">
@@ -21,7 +22,7 @@ function LoginScreen() {
       </div>
       <div className="loginScreen__body">
         {signin ? (
-          <Signup />
+          <Signup emailaddress={email} />
         ) : (
           <>
             <h1>Unlimited movies, TV shows, and more.</h1>
@@ -37,7 +38,14 @@ function LoginScreen() {
                   setSignin(true);
                 }}
               >
-                <input type="email" placeholder="Email Address" />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => {
+                    setemail(e.target.value);
+                  }}
+                />
                 <button className="loginScreen__getStarted">GET STARTED</button>
               </form>
             </div>

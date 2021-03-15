@@ -94,7 +94,6 @@
   background-color: #e50914;
   border: none;
   font-weight: 600;
-  transform: translateY(1px);
 }
 
 @media only screen and (max-width: 1000px) {
