@@ -3,14 +3,21 @@ import "./LoginScreen.css";
 import Signup from "../Components/Signup";
 import metflixy from "../media/metflixy.png";
 import { Button } from "@material-ui/core";
+import { useHistory } from "react-router";
 
 function LoginScreen() {
   const [signin, setSignin] = useState(false);
   const [email, setemail] = useState("");
+  const history = useHistory();
   return (
     <div className="loginScreen">
       <div className="loginScreen__background">
-        <img src={metflixy} alt="netflix log" className="loginScreen__logo" />
+        <img
+          src={metflixy}
+          alt="netflix log"
+          className="loginScreen__logo"
+          onClick={() => history.push("/")}
+        />
         <button
           variant="contained"
           className="loginScreen__button"
