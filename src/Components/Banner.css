@@ -3,21 +3,23 @@
 }
 .banner {
   position: relative;
-  height: 548px;
+  height: 80%;
   color: white;
   object-fit: contain;
   overflow: hidden;
+  background-size: cover;
 }
 .banner__contents {
   margin-left: 30px;
   padding-top: 140px;
-  min-height: 190px;
+  min-height: 270px;
   flex-grow: 1;
 }
 .banner__title {
   font-size: 3rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
+  cursor: pointer;
 }
 .banner_description {
   width: 45rem;

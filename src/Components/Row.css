@@ -12,6 +12,7 @@
   object-fit: cover;
   transition: all 0.3s;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .row__posterLarge:hover {
