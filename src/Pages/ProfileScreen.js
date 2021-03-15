@@ -22,7 +22,9 @@ function ProfileScreen() {
             <div className="profileScreen__plans">
               <h3>{`Plans (current Plan ${currentplan})`}</h3>
               <button
-                onClick={() => auth.signOut}
+                onClick={() => {
+                  auth.signOut();
+                }}
                 className="profileScreen__signout"
               >
                 Sign out
