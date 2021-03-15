@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./LoginScreen.css";
 import Signup from "../Components/Signup";
 import metflixy from "../media/metflixy.png";
-import { Button } from "@material-ui/core";
 import { useHistory } from "react-router";
 
 function LoginScreen() {
