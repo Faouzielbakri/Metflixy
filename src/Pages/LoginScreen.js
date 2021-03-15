@@ -15,7 +15,7 @@ function LoginScreen() {
           src={metflixy}
           alt="netflix log"
           className="loginScreen__logo"
-          onClick={() => history.push("/")}
+          onClick={() => setSignin(false)}
         />
         <button
           variant="contained"
