@@ -7,11 +7,12 @@ import { auth } from "../firebase";
 function ProfileScreen() {
   const user = useSelector(selectUser);
   const currentplan = "none";
+  console.log(auth.fetchSignInMethodsForEmail("faouzi@gmail.com"));
   return (
     <div className="profilescreen">
       <Nav />
       <div className="profileScreen__body">
-        <h1>Edit Profile .</h1>
+        <h1>Edit Profile </h1>
         <div className="profileScreen__info">
           <img
             src="https://pbs.twimg.com/profile_images/1240119990411550720/hBEe3tdn_400x400.png"

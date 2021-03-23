@@ -13,38 +13,44 @@ function HomeScreen() {
       <Banner />
       {/* rows */}
       <Row
+        key={`originals`}
         title={`NETFLIX ORIGINALS`}
         fetchUrl={requets.fetchNetflixOriginals}
+        moviekind="tv"
         isLargeRow
       />
       <Row
-        key={"Trending"}
+        key={`Trending`}
         title={`Trending`}
         fetchUrl={requets.fetchTrending}
       />
-      <Row key={"Top"} title={`Top Rated`} fetchUrl={requets.fetchTopRated} />
       <Row
-        key={"Action"}
+        key={`Toprated`}
+        title={`Top Rated`}
+        fetchUrl={requets.fetchTopRated}
+      />
+      <Row
+        key={`Action`}
         title={`Action Movies`}
         fetchUrl={requets.fetchActionMovies}
       />
       <Row
-        key={"Comedy"}
+        key={`Comedy`}
         title={`Comedy Movies`}
         fetchUrl={requets.fetchComedyMovies}
       />
       <Row
-        key={"Horror"}
+        key={`Horror`}
         title={`Horror Movies`}
         fetchUrl={requets.fetchHorrorMovies}
       />
       <Row
-        key={"Romance"}
+        key={`Romance`}
         title={`Romance Movies`}
         fetchUrl={requets.fetchRomanceMovies}
       />
       <Row
-        key={"Documentaries"}
+        key={`Documentaries`}
         title={`Documentaries`}
         fetchUrl={requets.fetchDocumentaries}
       />

@@ -6,9 +6,11 @@
 }
 .row > h2 {
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .row__poster {
-  max-height: 100px;
+  max-height: 83px;
   object-fit: cover;
   transition: all 0.3s;
   border-radius: 5px;
@@ -28,5 +30,22 @@
 }
 
 .row__posterLarge {
-  max-height: 250px;
+  max-height: 220px;
+}
+.row__movieitem {
+  flex-grow: 1;
+}
+@media screen and (max-width: 1000px) {
+  .row__poster {
+    max-height: 95px;
+  }
+  .row__posterLarge {
+    max-height: 240px;
+  }
+  .row > h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

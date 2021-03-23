@@ -8,6 +8,8 @@
   object-fit: contain;
   overflow: hidden;
   background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 .banner__contents {
   margin-left: 30px;
@@ -59,4 +61,9 @@
 .banner__button:hover {
   color: black;
   background-color: seashell;
+}
+@media screen and (max-width: 700px) {
+  .banner_description {
+    width: 90%;
+  }
 }

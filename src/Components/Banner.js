@@ -5,10 +5,14 @@ import "./Banner.css";
 import requets from "../Request";
 import ReactTypingEffect from "react-typing-effect";
 import { Paper } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { MainingMovie } from "../features/movieSlice";
+import { useHistory } from "react-router";
 
 function Banner() {
   const [movie, setMovie] = useState([]);
-
+  const history = useHistory();
+  const dispatch = useDispatch();
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requets.fetchNetflixOriginals);
@@ -17,11 +21,13 @@ function Banner() {
           Math.floor(Math.random() * request.data.results.length - 1)
         ]
       );
+
       return request;
     }
     fetchData();
+    // eslint-disable-next-line
   }, []);
-  console.log(movie);
+  // console.log(movie);
   function truncate(string, n) {
     let newstring = string
       ? string?.length > n
@@ -33,6 +39,7 @@ function Banner() {
       ? newstring
       : newstring.substr(0, newstring.lastIndexOf(" "));
   }
+
   return (
     <header
       className="banner"
@@ -46,7 +53,15 @@ function Banner() {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner__butoons">
-          <button className="banner__button">Play</button>
+          <button
+            className="banner__button"
+            onClick={() => {
+              dispatch(MainingMovie({ ...movie }));
+              setTimeout(history.push(`/tv/${movie.id}`));
+            }}
+          >
+            Play
+          </button>
           <button className="banner__button">My List</button>
         </div>
         <div className="banner_description">
