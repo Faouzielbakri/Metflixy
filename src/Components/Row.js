@@ -28,6 +28,7 @@ function Row({ title, fetchUrl, moviekind = "movie", isLargeRow = false }) {
 
   async function sendToStore(kind, movieuid) {
     const movieurl = `https://api.themoviedb.org/3/${kind}/${movieuid}?api_key=${API_KEY}`;
+    // eslint-disable-next-line
     const request = await axios
       .get(movieurl)
       .then((request) => {

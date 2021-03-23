@@ -1,23 +1,23 @@
 import React from "react";
-import { useParams } from "react-router";
+// import { useParams } from "react-router";
 import Nav from "../Components/Nav";
 import "./MoviePage.css";
-import { useEffect, useState } from "react";
-import axios from "../axios";
-import { API_KEY } from "./../Request";
+import { useState } from "react";
+// import axios from "../axios";
+// import { API_KEY } from "./../Request";
 // import Banner from "../Components/Banner";
-import { useDispatch, useSelector } from "react-redux";
-import { MainingMovie, selectMovie } from "./../features/movieSlice";
+import { useSelector } from "react-redux";
+import { selectMovie } from "./../features/movieSlice";
 import { Paper } from "@material-ui/core";
 
 function MoviePage({ kind = "movie" }) {
-  const { movieuid } = useParams();
+  // const { movieuid } = useParams();
   const reduxmovie = useSelector(selectMovie);
-  const dispatch = useDispatch();
+  // eslint-disable-next-line
   const [movie, setMovie] = useState(
     reduxmovie || JSON.parse(localStorage.getItem("state"))
   );
-  const fetchUrl = `https://api.themoviedb.org/3/${kind}/${movieuid}?api_key=${API_KEY}`;
+  // const fetchUrl = `https://api.themoviedb.org/3/${kind}/${movieuid}?api_key=${API_KEY}`;
   const baseurl = "https://image.tmdb.org/t/p/original";
 
   window.onbeforeunload = function (event) {
