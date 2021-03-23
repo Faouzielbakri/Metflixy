@@ -100,4 +100,7 @@
   .loginScreen__body > h1 {
     max-width: none;
   }
+  .loginScreen__body {
+    top: 20%;
+  }
 }
