@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 import { auth } from "../firebase";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import "./Signup.css";
 
-function Signup({ emailaddress }) {
+function Signup({ emailaddress, setSignin }) {
   const [email, setemail] = useState(emailaddress);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
@@ -37,6 +38,14 @@ function Signup({ emailaddress }) {
   };
   return (
     <div className="signupScreen">
+      <button
+        className="signupScreen__goback"
+        onClick={() => {
+          setSignin(false);
+        }}
+      >
+        <ArrowBackIcon />
+      </button>
       <form>
         <h1>Sign In</h1>
         <input

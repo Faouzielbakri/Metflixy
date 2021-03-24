@@ -26,7 +26,7 @@ function LoginScreen() {
       </div>
       <div className="loginScreen__body">
         {signin ? (
-          <Signup emailaddress={email} />
+          <Signup emailaddress={email} setSignin={setSignin} />
         ) : (
           <>
             <h1>Unlimited movies, TV shows, and more.</h1>

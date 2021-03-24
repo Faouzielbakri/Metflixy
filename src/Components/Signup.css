@@ -1,12 +1,15 @@
 .signupScreen {
+  display: flex;
   max-width: 360px;
   padding: 75px;
+  padding-left: 35px;
   margin: auto auto;
   background: rgba(0, 0, 0, 0.85);
 }
 .signupScreen > form {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 .signupScreen > form > input {
   outline-width: 0;
@@ -38,4 +41,15 @@
 .signup__link:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+.signupScreen__goback {
+  margin-right: 20px;
+  max-height: 45px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: none;
+}
+.signupScreen__goback:focus {
+  outline: none;
+  box-shadow: none;
 }
