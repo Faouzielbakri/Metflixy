@@ -30,7 +30,7 @@ function Signup({ emailaddress, setSignin }) {
         passwordRef.current.value
       )
       .then((authuser) => {
-        console.log(authuser);
+        // console.log(authuser);
       })
       .catch((error) => {
         alert(error.message);

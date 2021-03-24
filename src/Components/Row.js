@@ -56,7 +56,7 @@ function Row({ title, fetchUrl, moviekind = "movie", isLargeRow = false }) {
             style={{ overflow: "hidden" }}
             className="row__movieitem"
           >
-            {movie.id === 553301 ? console.log(movie) : console.log()}
+            {/* {movie.id === 553301 ? console.log(movie) : console.log()} */}
             <img
               key={movie.id}
               src={`${base_url}${
