@@ -46,7 +46,7 @@
   margin-right: 20px;
   max-height: 45px;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: transparent;
   border: none;
 }
 .signupScreen__goback:focus {
